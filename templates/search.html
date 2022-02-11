@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block body%}
+    <div class="container">
+    {%if searched%}
+    {%for i in results%}
+
+        <a href="{{i.full_name}}/{{i}}"class="list-group-item list-group-item-action">{{i}}  - {{i.full_name}}</a>
+        {%endfor%}
+        
+        {%endif%}
+    
+        
+
+    </div>
+{%endblock%}

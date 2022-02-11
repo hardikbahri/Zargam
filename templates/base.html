@@ -1,0 +1,91 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Zargam</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+
+
+
+
+
+</head>
+
+
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+        <li><a href="{%url 'artis'%}" class="nav-link px-2 text-white logo">Zargam</a></li>
+        <li><a href="{%url 'artis' %}" class="nav-link px-2 text-white">Artists</a></li>
+      </ul>
+
+     
+          <form class="d-flex" method=POST action="{%url 'search' %}">
+            {%csrf_token%}
+            <input class="form-control me-2" type="search" placeholder="Search artist or song name" aria-label="Search" name="searched">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+          </form>
+          
+        </form>
+      </header>
+      
+                
+                
+      <body>
+        <main>
+          <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" id="myInput" onkeyup="myFunction()" class="form-control form-control-dark"
+            placeholder="Search..." aria-label="Search">
+            <ul id="myUL"> -->
+              
+              {% block body %}
+              {% endblock %}
+              </main>
+              
+          
+          
+          
+          
+          
+          
+      
+
+    
+    
+
+
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+
+        <span class="text-muted">&copy; Zargam,2022 Company </span>
+      </div>
+
+
+    </footer>
+  </div>
+
+
+  <script src="{% static 'script.js' %}"></script>
+
+
+</body>
+
+</html>

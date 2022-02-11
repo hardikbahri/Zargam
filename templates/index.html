@@ -1,0 +1,60 @@
+{%extends 'base.html'%}
+{% load static %}
+
+<body>
+
+
+
+  <main>
+
+    {% block body %}
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+
+
+
+
+          <!-- CARD BEGINNING -->
+          {% for i in dests%}
+          <div class="col">
+            <div class="card shadow-sm">
+               <a href="Artists/{{i.full_name}}"><img class="img" src={{i.image.url}}></a>
+
+              <div class="card-body">
+                <p class="card-text"><a href="Artists/{{i.full_name}}">{{i.full_name}}</a>
+                </p> 
+              </div>
+            </div>
+          </div>
+        
+          {%endfor%}
+          <!-- CARD END -->
+        </div>
+      </div>
+    </div>
+    {% endblock%}
+
+  </main>
+
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+      <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
+          href="../getting-started/introduction/">getting started guide</a>.</p>
+    </div>
+  </footer>
+
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.img{
+    width: 6cm;
+}
+.col{
+    width: 6.5cm;
+}
+a:link, a:visited {
+    
+    color: rgb(3, 0, 0);
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+a:hover, a:active {
+    background-color: rgb(142, 142, 145);
+  }
+p{
+    font-size:18px;
+}
+.nav-item{
+    color:rgb(51, 209, 85);
+}
+
+.nav-link.px-2.text-white{
+    font-size: 20px;
+}
+.form-control.me-2{
+    width: 10cm;
+}
